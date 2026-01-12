@@ -10,12 +10,12 @@ import tkinter as tk
 
 pd.options.mode.chained_assignment = None
 
-df = pd.read_csv('Surviv.io-Weapon-Guesser/surviv_weapons_data.csv')
+df = pd.read_csv('surviv_weapons_data.csv')
 columns = df.columns
 weapons = df[columns[0]]
 fire_types = df[columns[1]]
 for idx, i in enumerate(df[columns[2]]):
-    i = f'Surviv.io-Weapon-Guesser/icons/{idx}.png'
+    i = f'icons/{idx}.png'
     df[columns[2]][idx] = i
 icons = df[columns[2]]
 weapon_types = df[columns[3]]
